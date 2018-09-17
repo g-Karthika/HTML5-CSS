@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo in Javascript</title>
+</head>
+<body onload="domLoaded()">
+  <h3>Javascript ToDo</h3>  
+  <label for="">ToDo Item:</label>
+  <input type="">
+  <button onclick="addToDo()">Add ToDo</button>
+  <div id="todolist">
+
+  </div>
+  <script>
+      var counterValue = 0;
+      //create new ul element outside DOM.It has to be created only once
+      var newUl = document.createElement("ol")
+      var todolistRef = document.getElementById("todolist")
+      todolistRef.innerHTML = "ToDo list items will show here!"
+      function addToDo(){
+          //save ToDo to localstorage
+          
+          console.log("DOM Creation from JS");
+          var valueInput = document.getElementsByTagName("input")[0].value
+          saveTodo(valueInput)
+
+          //create li element outside DOM.It is created for every task which is added.
+            var newLi = document.createElement("li")
+            newLi.innerHTML = valueInput
+            //append new li to new ul
+            newUl.appendChild(newLi)
+              //Insert new element to DOM
+            todolistRef.appendChild(newUl)
+            document.getElementsByTagName("input")[0].value = ""
+           
+            
+        
+      }
+      function saveTodo(valueInput){
+        localStorage.setItem("todolist_"+counterValue,valueInput)
+        counterValue++
+        localStorage.setItem("taskCounter",counterValue)
+      }
+      function domLoaded(){
+        
+        if(typeof(localStorage)!="undefined"){
+            if(localStorage.getItem("taskCounter")==null){
+                counterValue=0
+            }
+            else{
+            var currentCounter = localStorage.getItem("taskCounter")
+            counterValue = parseInt(currentCounter)            
+
+           // document.getElementById("todolistValue").value=""
+           // document.getElementById("todolistValue").focus()
+            
+            }
+
+        }
+     //   getlocalstorageData()
+      }
+     /* function getlocalstorageData(){
+          for(i=0;i<counterValue;i++){
+              var newLi = document.createElement("li")
+                var eachTodo=localStorage.setItem("taskCounter"+counterValue);
+                newUl.appendChild(newLi)
+          }
+          todolistRef.appendChild(newUl)
+            document.getElementsByTagName("input")[0].focus
+      }*/
+      
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.para3{
+    color:darkmagenta;
+    background-color: darkkhaki;
+    text-align:center;   
+    /*border: 2px dotted blueviolet;*/
+   /* border-top: 1px dotted red;*/
+   /* border-bottom: 3px solid greenyellow*/
+    
+    border-top-color: fuchsia;
+    border-top-width: 2px;
+    border-top-style: dashed;
+
+    border-bottom-color:mediumspringgreen;
+    border-bottom-width: 2px;
+    border-bottom-style: dashed;
+}
+div{
+    border: 3px solid red;
+    border-radius: 5px;
+}
+.layout1{
+    border-color:pink;
+    width:200px;
+    height: 200px;
+    position: absolute;
+}
+.layout2{
+    border-color:magenta;
+    width:200px;
+    height: 300px;
+    float: right;
+    position: relative;
+}

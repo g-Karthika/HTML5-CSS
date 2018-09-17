@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript DOM</title>
+    <style>
+        .para1{
+            color: red;
+        }
+        .para2{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head1">JS DOM Navigation</h1>
+    <div>
+        <h2>Demo Heading 2</h2>
+        <p class="para1">some dummy document1</p>
+        <p class="para2">data for woorkout2</p>
+        <p>tihs is 3 data for woorkout</p>
+        <p>tihs is 4 data for woorkout</p>
+    </div>
+    <script>
+        var idRef=document.getElementById("head1");
+        idRef.innerHTML="Javascript DOM Navigation"
+        clg
+        var tagRef = document.getElementsByTagName("p")
+       // tagRef[0].innerHTML = "This is para1"
+        console.log(tagRef);
+        for(i=0; i<tagRef.length;i++){
+            tagRef[i].innerHTML = i+"I am new para!"
+        }
+        var classRef = document.getElementsByClassName("para1")
+        console.log(classRef);
+        classRef[0].innerHTML = "This is coming from class"
+
+        var queryRef = document.querySelectorAll("p.para1")
+        console.log(queryRef);
+        
+    </script>
+</body>
+</html>

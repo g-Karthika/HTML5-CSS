@@ -1,0 +1,86 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.logo{
+    width: 120px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    
+    
+}
+
+ul{
+    list-style: none;
+    float: right;
+    margin-top: 70px;
+    
+}
+li{
+    display: inline;
+    margin-right: 25px;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 120%;
+    background-color: indianred;
+   
+    
+}
+li:hover{
+    color: goldenrod;
+    border-bottom: 1px  goldenrod;
+    transition: all 0.5s ease-in;
+    border-radius: 5px;
+}
+header{
+   /* background-image: url("bg1.jfif");*/
+    background-image: url("bg3.jpg");
+    height: 100vh;
+    background-position: center;
+    
+    background-size: 90%;
+
+}
+.mainmessage{
+    top:50%;
+    font-size: 200%;
+    position: absolute;
+  /*  border: 1px solid red;*/
+    width: 35%;
+    left: 1%;
+    padding: 20px;
+    color: red;
+    background-color:rgba(1, 1, 0, 10);
+    
+}
+.messageaction{
+    top:68%;
+    font-size: 150%;
+    position: absolute;
+   
+   border-radius: 5px;
+    width: 35%;
+   
+    left: 1%;
+    padding: 20px;
+    color:white;
+    font-size: 150%;
+    font-weight: bold;
+    
+    }
+    
+.button{
+    
+   color:white;
+   text-decoration: none;
+   border: 1px solid greenyellow;
+   border-radius: 5px;
+  background-color: gray;
+  
+}
+    a:hover{
+        color: goldenrod;
+        border-bottom: 1px solid goldenrod;
+        transition: all 0.3s ease-in;
+    }
